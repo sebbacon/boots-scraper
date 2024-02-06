@@ -1,0 +1,81 @@
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+
+permissions:
+  contents: write
+
+jobs:
+  grab-data:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arg: ["11763511000001102", "42109411000001106"]  # VMPs: utrogestan, paracetamol 500mg
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Grab data
+      run: python fetch_stock.py scrape ${{ matrix.arg }}
+    - name: Upload data
+      uses: actions/upload-artifact@v4
+      with:
+        name: output-${{ matrix.arg }}
+        path: tmp/
+
+  process-data:
+    needs: grab-data 
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v2
+    - name: Set up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Download data
+      uses: actions/download-artifact@v4
+      with:
+        path: tmp/
+        merge-multiple: true
+    - name: Debug tmp contents
+      run: ls -R tmp/
+    - name: Combine scraped shortages data
+      run: python fetch_stock.py combine
+    - name: Get latest stores data
+      run: python grab_stores.py
+    - name: Generate maps
+      run: python make_map.py
+    - name: Check for Changes
+      id: git-check
+      run: |
+        diff_exit_code=$(git diff --exit-code outputs/; echo $?)
+        untracked_files=$(git ls-files --others --exclude-standard outputs/)
+        if [ -n "$untracked_files" ] || [ $diff_exit_code -ne 0 ]; then
+          echo "git-diff-exit-code=1" >> $GITHUB_ENV
+        else
+          echo "git-diff-exit-code=0" >> $GITHUB_ENV
+        fi
+    - name: Debug exit code env
+      run: |
+        echo "Debug exit code:"
+        echo ${{ env.git-diff-exit-code }}
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Commit and Push Output
+      if: env.git-diff-exit-code == '1'
+      run: |
+        git add outputs/
+        git commit -m "Add output from GitHub Action"
+        git push
