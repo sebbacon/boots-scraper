@@ -73,7 +73,6 @@ for productId in productIds:
         ax=ax,
         legend=True,
         cmap="OrRd",
-        edgecolor="black",
     )
     plt.title(f"Out-of-stock levels by PCN for VMP {productId}")
 
