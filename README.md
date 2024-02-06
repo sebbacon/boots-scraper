@@ -8,12 +8,12 @@ What it does:
 * Combine these files into a single CSV.
 * When run via Github actions, write the result back to the repo.
 
-To run:
-
-* Edit `fetch_stock.py` -- add VMPs of interest to the top
-* `pip install -r requirements.txt`
-* `python fetch_stock.py`
 
 It takes about 15 mins to scrape one VMP.
 Each job in a workflow can run for 6 hours.
-So without modification, you can reliably track up to 18 VMPs.
+So without modification, you can reliably track up to ~18 VMPs.
+
+The master data is recorded at `outputs/stock_levels_all.csv`; 
+for convenience, heat maps showing low stock by PCN are also generated
+as png files in `outputs/`, named for the VMP.
+
