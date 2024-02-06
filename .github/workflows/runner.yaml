@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arg: ["11763511000001102", "42109411000001106"]  # VMPs: utrogestan, paracetamol 500mg
+        arg: ["11763511000001102", "42109411000001106", "36124211000001103"]  # VMPs: utrogestan, paracetamol 500mg caps, Methylphenidate 27mg modified-release tablets
     steps:
     - uses: actions/checkout@v2
       with:
