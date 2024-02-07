@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import yaml
+import csv
+import pandas as pd
+from datetime import datetime
 
 product_data = {}
 with open("config.yaml", "r") as file:
@@ -20,6 +23,14 @@ percentages = (
     .unstack(fill_value=0)
     * 100
 )
+
+historic_data = pd.read_csv("outputs/timeseries.csv")
+current_data = percentages.reset_index()
+current_data["datetime"] = datetime.now()
+historic_data = pd.concat([historic_data, current_data])
+historic_data.to_csv("outputs/timeseries.csv", index=False)
+
+
 # Mapping stockLevel to colors for the plot
 color_map = {
     "G": "green",
