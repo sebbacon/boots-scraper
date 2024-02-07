@@ -112,6 +112,9 @@ def process_batch(batch, vmp, file):
                 stock_levels = data.get("stockLevels", [])
                 if stock_levels:
                     for item in stock_levels:
+                        if item["productId"] != vmp:
+                            print("Got unexpected product", item)
+                            continue
                         file.write(json.dumps(item) + "\n")
                     print(f"Got batch {batch} for {vmp}")
                     return True  # Batch processed successfully
