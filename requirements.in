@@ -3,3 +3,4 @@ lxml
 geopandas
 matplotlib
 shapely
+PyYAML

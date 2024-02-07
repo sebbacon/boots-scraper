@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from shapely.geometry import shape, Point
 import requests
 from collections import defaultdict
+import yaml
 
 # # Step 0: Download the JSON data from the OpenPrescribing API
 pcn_api_url = "https://openprescribing.net/api/1.0/org_location/?org_type=pcn"
@@ -34,6 +35,12 @@ gdf_shapes = gpd.GeoDataFrame.from_features(geojson["features"])
 
 # Initialize a dictionary to hold red counts for each (shape_code, productId)
 red_counts = defaultdict(lambda: defaultdict(int))
+
+product_data = {}
+with open("config.yaml", "r") as file:
+    data = yaml.safe_load(file)["vmps"]
+    for d in data:
+        product_data[d["snomed_code"]] = d["name"]
 
 
 # Step 2 & 3: Aggregate Red counts per shape_code and productId
@@ -74,7 +81,9 @@ for productId in productIds:
         legend=True,
         cmap="OrRd",
     )
-    plt.title(f"Out-of-stock levels by PCN for VMP {productId}")
+    plt.title(
+        f"Out-of-stock levels by PCN for VMP {product_data.get(productId, productId)}"
+    )
 
     # Save to file
     plt.savefig(f"outputs/heatmap_{productId}.png")

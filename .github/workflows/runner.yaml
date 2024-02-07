@@ -78,6 +78,8 @@ jobs:
       run: python grab_stores.py
     - name: Generate maps
       run: python make_map.py
+    - name: Make index
+      run: python make_index.py
     - name: Check for Changes
       id: git-check
       run: |
