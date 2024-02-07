@@ -30,7 +30,11 @@ jobs:
           MATRIX_JSON='${{ steps.yaml-to-json.outputs.matrix }}'
           echo "Matrix: $MATRIX_JSON"
           echo "::set-output name=matrix::$MATRIX_JSON"
-
+  debug-matrix:
+    runs-on: ubuntu-latest
+    run: |
+      echo ${{ needs.prepare-matrix.outputs.matrix }}
+      echo ${{ fromJson(needs.prepare-matrix.outputs.matrix) }}
   grab-data:
     runs-on: ubuntu-latest
     strategy:
