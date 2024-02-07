@@ -27,7 +27,7 @@ jobs:
       - name: Set matrix for next job
         id: set-matrix
         run: |
-          MATRIX_JSON='{"snomed_codes":'"${{ steps.yaml-to-json.outputs.matrix }}"'}'
+          MATRIX_JSON='${{ steps.yaml-to-json.outputs.matrix }}'
           echo "Matrix: $MATRIX_JSON"
           echo "::set-output name=matrix::$MATRIX_JSON"
 
