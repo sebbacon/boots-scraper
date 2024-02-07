@@ -7,11 +7,33 @@ permissions:
   contents: write
 
 jobs:
+  prepare-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install YAML processing tool
+        run: sudo apt-get install -y jq
+      - name: Convert YAML to JSON
+        id: yaml-to-json
+        run: |
+          echo "Converting YAML to JSON"
+          JSON=$(yq e '.vmps[].snomed_code' config.yaml -o=json)
+          echo "Matrix JSON: $JSON"
+          echo "::set-output name=matrix::$(echo $JSON)"
+      - name: Set matrix for next job
+        id: set-matrix
+        run: |
+          MATRIX_JSON='{"snomed_codes":'"${{ steps.yaml-to-json.outputs.matrix }}"'}'
+          echo "Matrix: $MATRIX_JSON"
+          echo "::set-output name=matrix::$MATRIX_JSON"
+
   grab-data:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arg: ["11763511000001102", "42109411000001106", "36124211000001103"]  # VMPs: utrogestan, paracetamol 500mg caps, Methylphenidate 27mg modified-release tablets
+        arg: ${{fromJson(needs.prepare-matrix.outputs.matrix)}}
     steps:
     - uses: actions/checkout@v2
       with:
