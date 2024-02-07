@@ -58,7 +58,7 @@ for product_id, row in percentages.iterrows():
 index_md = []
 
 for product_id, row in percentages.iterrows():
-    filename = f"outputs/product_{product_id}_stock_levels.png"
+    filename = f"./product_{product_id}_stock_levels.png"
     name = product_data.get(str(product_id), product_id)
     green_percentage = int(row.get("G", 0))
     index_md.append(f"*{name}: {green_percentage}% green*")
