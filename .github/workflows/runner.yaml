@@ -13,13 +13,15 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
       - name: Install YAML processing tool
-        run: sudo apt-get install -y jq
+        run: pip install yq
       - name: Convert YAML to JSON
         id: yaml-to-json
         run: |
           echo "Converting YAML to JSON"
-          JSON=$(yq e '.vmps[].snomed_code' config.yaml -o=json)
+          JSON=$(yq '[.vmps[].snomed_code]' config.yaml)
           echo "Matrix JSON: $JSON"
           echo "::set-output name=matrix::$(echo $JSON)"
       - name: Set matrix for next job
