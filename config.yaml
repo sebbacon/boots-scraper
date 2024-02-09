@@ -1,12 +1,12 @@
 vmps:
   - name: Utrogestan 100mg
     snomed_code: "11763511000001102"
-  - name: Paracetamol 500 caps
-    snomed_code: "42109411000001106"
-  - name: Methylphenidate 27mg modified-release tabs
-    snomed_code: "36124211000001103"
-  - name: Ramipril 2.5mg caps
-    snomed_code: "42381411000001102"
-  - name: Lisedexamfetamine 20mg caps
-    snomed_code: "42013311000001109"
+  # - name: Paracetamol 500 caps
+  #   snomed_code: "42109411000001106"
+  # - name: Methylphenidate 27mg modified-release tabs
+  #   snomed_code: "36124211000001103"
+  # - name: Ramipril 2.5mg caps
+  #   snomed_code: "42381411000001102"
+  # - name: Lisedexamfetamine 20mg caps
+  #   snomed_code: "42013311000001109"
 
