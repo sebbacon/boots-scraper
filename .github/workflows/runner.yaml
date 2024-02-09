@@ -84,9 +84,12 @@ jobs:
       id: git-check
       run: |
         set -x
-        diff_exit_code=$(git diff --exit-code outputs/; echo $?)
+        # check for changes
+        git diff --name-only --exit-code outputs/
+        has_changes=$?
+        echo "has_changes is: $has_changes" 
         untracked_files=$(git ls-files --others --exclude-standard outputs/)
-        if [ -n "$untracked_files" ] || [ "$diff_exit_code" -ne 0 ]; then
+        if [ -n "$untracked_files" ] || [ "$has_changes" -ne 0 ]; then
           echo "git-diff-exit-code=1" >> $GITHUB_ENV
         else
           echo "git-diff-exit-code=0" >> $GITHUB_ENV
