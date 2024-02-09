@@ -97,6 +97,7 @@ jobs:
         else
           echo "git-diff-exit-code=0" >> $GITHUB_ENV
         fi
+      continue-on-error: true
     - name: Debug exit code env
       run: |
         echo "Debug exit code:"
