@@ -88,7 +88,8 @@ jobs:
       run: |
         set -x
         # check for changes
-        has_changes=$(git diff --name-only --exit-code outputs/; echo $?)
+        git diff --name-only --exit-code outputs/ > /dev/null 2>&1
+        has_changes=$?
         echo "has_changes is: $has_changes" 
         untracked_files=$(git ls-files --others --exclude-standard outputs/)
         echo "untracked_files is: $untracked_files"
