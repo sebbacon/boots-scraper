@@ -88,27 +88,26 @@ jobs:
       run: |
         set -x
         # check for changes
-        git diff --name-only --exit-code outputs/ > /dev/null 2>&1
-        has_changes=$?
+        has_changes=$(git diff --name-only outputs/)
         echo "has_changes is: $has_changes" 
         untracked_files=$(git ls-files --others --exclude-standard outputs/)
         echo "untracked_files is: $untracked_files"
-        if [ -n "$untracked_files" ] || [ "$has_changes" -ne 0 ]; then
-          echo "git-diff-exit-code=1" >> $GITHUB_ENV
+        if [ -n "$untracked_files" ] || [ -n "$has_changes" ]; then
+          echo "git-changes=1" >> $GITHUB_ENV
         else
-          echo "git-diff-exit-code=0" >> $GITHUB_ENV
+          echo "git-changes=0" >> $GITHUB_ENV
         fi
     - name: Debug exit code env
       run: |
-        echo "Debug exit code:"
-        echo ${{ env.git-diff-exit-code }}
+        echo "Debug changes:"
+        echo ${{ env.git-changes }}
     - name: Configure Git
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
     - name: Commit and Push Output
-      if: env.git-diff-exit-code == '1'
+      if: env.git-changes == '1'
       run: |
         git add outputs/
         git commit -m "Add output from GitHub Action"
