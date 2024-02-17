@@ -10,7 +10,7 @@ from pathlib import Path
 
 # Backoff parameters
 base_wait = 1.5  # initial wait time in seconds
-max_wait = 120  # maximum wait time in seconds
+max_wait = 60 * 20  # maximum wait time in seconds
 max_retries = 10  # maximum number of retries
 
 
@@ -80,6 +80,7 @@ def save_state(vmp, batch):
 # if you scrape it too fast
 def process_batch(batch, vmp, file):
     attempt = 0
+    should_retry = False
     while attempt < max_retries:
         time.sleep(base_wait)
         data_template = {"storeIdList": batch, "productIdList": [vmp]}
@@ -91,11 +92,12 @@ def process_batch(batch, vmp, file):
             allow_redirects=False,
         )
         assert vmp in file.name
-        should_retry = False
 
         if response.status_code == 200:
             try:
                 data = response.json()
+                should_retry = False
+                attempt = 0
                 rejected = data.get("rejectedFilters", [])
                 if rejected:
                     print("Filter problem:", rejected)
@@ -122,10 +124,6 @@ def process_batch(batch, vmp, file):
                 print("JSONDecodeError:", response.text)
                 should_retry = True
         else:
-            if response.status_code == 302:
-                print("Redirect oddness. Sleeping for 5")
-                time.sleep(5)
-
             should_retry = True
         if should_retry:
             print(f"Attempt {attempt + 1} failed: {response.status_code}")
