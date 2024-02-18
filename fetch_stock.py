@@ -9,8 +9,8 @@ import glob
 from pathlib import Path
 
 # Backoff parameters
-base_wait = 1.5  # initial wait time in seconds
-max_wait = 60 * 20  # maximum wait time in seconds
+base_wait = 4  # initial wait time in seconds
+max_wait = 60 * 30  # maximum wait time in seconds
 max_retries = 10  # maximum number of retries
 
 
@@ -126,9 +126,12 @@ def process_batch(batch, vmp, file):
         else:
             should_retry = True
         if should_retry:
-            print(f"Attempt {attempt + 1} failed: {response.status_code}")
+
             attempt += 1
             wait = min(max_wait, pow(2, attempt) * base_wait)  # exponential backoff
+            print(
+                f"Attempt {attempt + 1} failed: {response.status_code}. Waiting {wait}s"
+            )
             time.sleep(wait)
     return False  # All retries failed
 
