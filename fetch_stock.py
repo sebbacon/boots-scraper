@@ -10,6 +10,7 @@ from pathlib import Path
 
 # Backoff parameters
 base_wait = 4  # initial wait time in seconds
+start_retry_wait = 30  # when blocked, start waiting this long (experimentally deduced to be their default block)
 max_wait = 60 * 30  # maximum wait time in seconds
 max_retries = 10  # maximum number of retries
 
@@ -128,7 +129,9 @@ def process_batch(batch, vmp, file):
         if should_retry:
 
             attempt += 1
-            wait = min(max_wait, pow(2, attempt) * base_wait)  # exponential backoff
+            wait = min(
+                max_wait, pow(2, attempt) * start_retry_wait
+            )  # exponential backoff
             print(
                 f"Attempt {attempt + 1} failed: {response.status_code}. Waiting {wait}s"
             )
