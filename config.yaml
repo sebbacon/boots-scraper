@@ -13,4 +13,8 @@ vmps:
     snomed_code: "42013311000001109"
   - name: Lisedexamfetamine 30mg caps # known shortage
     snomed_code: "42013411000001102"
+  - name: Cefalexin 500mg capsules
+    snomed_code: "39694811000001102"  # chromic, serious and rare 
+  - name: Cefalexin 500mg tablets
+    snomed_code: "39735911000001106"  # interchangeable clinically with prev but obvs a pharmacist can't change so they are two to look at together
 
