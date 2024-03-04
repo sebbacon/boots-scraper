@@ -19,7 +19,7 @@
 *Lisedexamfetamine 30mg caps: 14% green*
 ![bar chart](././product_42013411000001102_stock_levels.png)
 ([<img src='./heatmap_42013411000001102.png' width='200'>](./heatmap_42013411000001102.png))
-*Paracetamol 500 caps: 34% green*
+*Paracetamol 500 caps: 35% green*
 ![bar chart](././product_42109411000001106_stock_levels.png)
 ([<img src='./heatmap_42109411000001106.png' width='200'>](./heatmap_42109411000001106.png))
 *Ramipril 2.5mg caps: 17% green*
