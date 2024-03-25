@@ -2,7 +2,7 @@ vmps:
   - name: Utrogestan 100mg # Common but historic shortages
     snomed_code: "11763511000001102"
   - name: Estriol 0.1% cream  # SSP as of 2022
-    snomed_code: "0702010F0AAAAAA"
+    snomed_code: "41896911000001100"
   - name: Paracetamol 500 caps # OTC - possibly interesting
     snomed_code: "42109411000001106"
   - name: Methylphenidate 27mg modified-release tabs
