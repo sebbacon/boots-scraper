@@ -1,7 +1,7 @@
 *Utrogestan 100mg: 50% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
-*Methylphenidate 27mg modified-release tabs: 38% green*
+*Methylphenidate 27mg modified-release tabs: 37% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
 *Cefalexin 500mg capsules: 40% green*
