@@ -7,7 +7,7 @@
 *Cefalexin 500mg capsules: 55% green*
 ![bar chart](././product_39694811000001102_stock_levels.png)
 ([<img src='./heatmap_39694811000001102.png' width='200'>](./heatmap_39694811000001102.png))
-*Atorvastatin 20mg tabs: 9% green*
+*Atorvastatin 20mg tabs: 10% green*
 ![bar chart](././product_39733011000001106_stock_levels.png)
 ([<img src='./heatmap_39733011000001106.png' width='200'>](./heatmap_39733011000001106.png))
 *Cefalexin 500mg tablets: 45% green*
@@ -19,7 +19,7 @@
 *Lisedexamfetamine 20mg caps: 19% green*
 ![bar chart](././product_42013311000001109_stock_levels.png)
 ([<img src='./heatmap_42013311000001109.png' width='200'>](./heatmap_42013311000001109.png))
-*Lisedexamfetamine 30mg caps: 25% green*
+*Lisedexamfetamine 30mg caps: 26% green*
 ![bar chart](././product_42013411000001102_stock_levels.png)
 ([<img src='./heatmap_42013411000001102.png' width='200'>](./heatmap_42013411000001102.png))
 *Paracetamol 500 caps: 35% green*
