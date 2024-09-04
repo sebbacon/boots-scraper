@@ -19,4 +19,6 @@ vmps:
     snomed_code: "39694811000001102"  # chromic, serious and rare 
   - name: Cefalexin 500mg tablets
     snomed_code: "39735911000001106"  # interchangeable clinically with prev but obvs a pharmacist can't change so they are two to look at together
+  - name: Concerta XL 36mg tablets
+    snomed_code: "36124511000001100"  # Concerta XL generally reported in shortage as of Sep 2024
 
