@@ -7,7 +7,7 @@
 *Concerta XL 36mg tablets: 11% green*
 ![bar chart](././product_36124511000001100_stock_levels.png)
 ([<img src='./heatmap_36124511000001100.png' width='200'>](./heatmap_36124511000001100.png))
-*Cefalexin 500mg capsules: 54% green*
+*Cefalexin 500mg capsules: 55% green*
 ![bar chart](././product_39694811000001102_stock_levels.png)
 ([<img src='./heatmap_39694811000001102.png' width='200'>](./heatmap_39694811000001102.png))
 *Atorvastatin 20mg tabs: 11% green*
