@@ -13,7 +13,7 @@
 *Atorvastatin 20mg tabs: 11% green*
 ![bar chart](././product_39733011000001106_stock_levels.png)
 ([<img src='./heatmap_39733011000001106.png' width='200'>](./heatmap_39733011000001106.png))
-*Cefalexin 500mg tablets: 43% green*
+*Cefalexin 500mg tablets: 44% green*
 ![bar chart](././product_39735911000001106_stock_levels.png)
 ([<img src='./heatmap_39735911000001106.png' width='200'>](./heatmap_39735911000001106.png))
 *Estriol 0.1% cream: 44% green*
