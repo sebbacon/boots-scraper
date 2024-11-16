@@ -1,7 +1,7 @@
-*Utrogestan 100mg: 49% green*
+*Utrogestan 100mg: 50% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
-*Methylphenidate 27mg modified-release tabs: 12% green*
+*Methylphenidate 27mg modified-release tabs: 13% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
 *Concerta XL 36mg tablets: 10% green*
@@ -28,6 +28,6 @@
 *Paracetamol 500 caps: 35% green*
 ![bar chart](././product_42109411000001106_stock_levels.png)
 ([<img src='./heatmap_42109411000001106.png' width='200'>](./heatmap_42109411000001106.png))
-*Ramipril 2.5mg caps: 17% green*
+*Ramipril 2.5mg caps: 18% green*
 ![bar chart](././product_42381411000001102_stock_levels.png)
 ([<img src='./heatmap_42381411000001102.png' width='200'>](./heatmap_42381411000001102.png))
