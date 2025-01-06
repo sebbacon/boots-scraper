@@ -1,4 +1,4 @@
-*Utrogestan 100mg: 54% green*
+*Utrogestan 100mg: 53% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
 *Methylphenidate 27mg modified-release tabs: 11% green*
