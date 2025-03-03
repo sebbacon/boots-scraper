@@ -16,7 +16,7 @@
 *Cefalexin 500mg tablets: 49% green*
 ![bar chart](././product_39735911000001106_stock_levels.png)
 ([<img src='./heatmap_39735911000001106.png' width='200'>](./heatmap_39735911000001106.png))
-*Estriol 0.1% cream: 40% green*
+*Estriol 0.1% cream: 41% green*
 ![bar chart](././product_41896911000001100_stock_levels.png)
 ([<img src='./heatmap_41896911000001100.png' width='200'>](./heatmap_41896911000001100.png))
 *Lisedexamfetamine 20mg caps: 17% green*
