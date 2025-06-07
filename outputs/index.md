@@ -4,7 +4,7 @@
 *Methylphenidate 27mg modified-release tabs: 18% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
-*Concerta XL 36mg tablets: 27% green*
+*Concerta XL 36mg tablets: 28% green*
 ![bar chart](././product_36124511000001100_stock_levels.png)
 ([<img src='./heatmap_36124511000001100.png' width='200'>](./heatmap_36124511000001100.png))
 *Cefalexin 500mg capsules: 53% green*
@@ -22,10 +22,10 @@
 *Lisedexamfetamine 20mg caps: 17% green*
 ![bar chart](././product_42013311000001109_stock_levels.png)
 ([<img src='./heatmap_42013311000001109.png' width='200'>](./heatmap_42013311000001109.png))
-*Lisedexamfetamine 30mg caps: 22% green*
+*Lisedexamfetamine 30mg caps: 23% green*
 ![bar chart](././product_42013411000001102_stock_levels.png)
 ([<img src='./heatmap_42013411000001102.png' width='200'>](./heatmap_42013411000001102.png))
-*Paracetamol 500 caps: 31% green*
+*Paracetamol 500 caps: 32% green*
 ![bar chart](././product_42109411000001106_stock_levels.png)
 ([<img src='./heatmap_42109411000001106.png' width='200'>](./heatmap_42109411000001106.png))
 *Ramipril 2.5mg caps: 17% green*
