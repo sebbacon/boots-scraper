@@ -22,7 +22,7 @@
 *Lisedexamfetamine 20mg caps: 17% green*
 ![bar chart](././product_42013311000001109_stock_levels.png)
 ([<img src='./heatmap_42013311000001109.png' width='200'>](./heatmap_42013311000001109.png))
-*Lisedexamfetamine 30mg caps: 22% green*
+*Lisedexamfetamine 30mg caps: 23% green*
 ![bar chart](././product_42013411000001102_stock_levels.png)
 ([<img src='./heatmap_42013411000001102.png' width='200'>](./heatmap_42013411000001102.png))
 *Paracetamol 500 caps: 32% green*
