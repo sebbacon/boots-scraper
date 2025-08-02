@@ -4,10 +4,10 @@
 *Methylphenidate 27mg modified-release tabs: 18% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
-*Concerta XL 36mg tablets: 31% green*
+*Concerta XL 36mg tablets: 30% green*
 ![bar chart](././product_36124511000001100_stock_levels.png)
 ([<img src='./heatmap_36124511000001100.png' width='200'>](./heatmap_36124511000001100.png))
-*Cefalexin 500mg capsules: 52% green*
+*Cefalexin 500mg capsules: 53% green*
 ![bar chart](././product_39694811000001102_stock_levels.png)
 ([<img src='./heatmap_39694811000001102.png' width='200'>](./heatmap_39694811000001102.png))
 *Atorvastatin 20mg tabs: 11% green*
