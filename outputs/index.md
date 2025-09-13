@@ -1,4 +1,4 @@
-*Utrogestan 100mg: 32% green*
+*Utrogestan 100mg: 34% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
 *Methylphenidate 27mg modified-release tabs: 19% green*
@@ -10,7 +10,7 @@
 *Cefalexin 500mg capsules: 59% green*
 ![bar chart](././product_39694811000001102_stock_levels.png)
 ([<img src='./heatmap_39694811000001102.png' width='200'>](./heatmap_39694811000001102.png))
-*Atorvastatin 20mg tabs: 1% green*
+*Atorvastatin 20mg tabs: 3% green*
 ![bar chart](././product_39733011000001106_stock_levels.png)
 ([<img src='./heatmap_39733011000001106.png' width='200'>](./heatmap_39733011000001106.png))
 *Cefalexin 500mg tablets: 56% green*
@@ -22,7 +22,7 @@
 *Lisedexamfetamine 20mg caps: 21% green*
 ![bar chart](././product_42013311000001109_stock_levels.png)
 ([<img src='./heatmap_42013311000001109.png' width='200'>](./heatmap_42013311000001109.png))
-*Lisedexamfetamine 30mg caps: 24% green*
+*Lisedexamfetamine 30mg caps: 25% green*
 ![bar chart](././product_42013411000001102_stock_levels.png)
 ([<img src='./heatmap_42013411000001102.png' width='200'>](./heatmap_42013411000001102.png))
 *Paracetamol 500 caps: 29% green*
