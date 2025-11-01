@@ -1,7 +1,7 @@
-*Utrogestan 100mg: 31% green*
+*Utrogestan 100mg: 32% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
-*Methylphenidate 27mg modified-release tabs: 21% green*
+*Methylphenidate 27mg modified-release tabs: 22% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
 *Concerta XL 36mg tablets: 36% green*
