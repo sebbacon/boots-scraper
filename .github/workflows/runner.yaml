@@ -79,8 +79,11 @@ jobs:
       run: python fetch_stock.py combine
     - name: Get latest stores data
       run: python grab_stores.py
-    - name: Generate maps
-      run: python make_map.py
+    # Temporarily disable PCN heatmap generation because the upstream
+    # OpenPrescribing endpoint is returning 403 to GitHub Actions.
+    # Keep the rest of the data pipeline running and publishing.
+    # - name: Generate maps
+    #   run: python make_map.py
     - name: Make index
       run: python make_index.py
     - name: Check for Changes

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import yaml
@@ -75,7 +76,8 @@ for product_id, row in percentages.iterrows():
     index_md.append(f"*{name}: {green_percentage}% green*")
     index_md.append(f"![bar chart](./{filename})")
     heatmap_path = f"./heatmap_{product_id}.png"
-    index_md.append(f"([<img src='{heatmap_path}' width='200'>]({heatmap_path}))")
+    if os.path.exists(f"outputs/heatmap_{product_id}.png"):
+        index_md.append(f"([<img src='{heatmap_path}' width='200'>]({heatmap_path}))")
 
 with open("outputs/index.md", "w") as f:
     f.write("\n".join(index_md))
