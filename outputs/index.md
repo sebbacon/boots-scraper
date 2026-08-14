@@ -1,7 +1,7 @@
 *Utrogestan 100mg: 84% green*
 ![bar chart](././product_11763511000001102_stock_levels.png)
 ([<img src='./heatmap_11763511000001102.png' width='200'>](./heatmap_11763511000001102.png))
-*Methylphenidate 27mg modified-release tabs: 34% green*
+*Methylphenidate 27mg modified-release tabs: 35% green*
 ![bar chart](././product_36124211000001103_stock_levels.png)
 ([<img src='./heatmap_36124211000001103.png' width='200'>](./heatmap_36124211000001103.png))
 *Concerta XL 36mg tablets: 50% green*
@@ -10,7 +10,7 @@
 *Cefalexin 500mg capsules: 84% green*
 ![bar chart](././product_39694811000001102_stock_levels.png)
 ([<img src='./heatmap_39694811000001102.png' width='200'>](./heatmap_39694811000001102.png))
-*Atorvastatin 20mg tabs: 90% green*
+*Atorvastatin 20mg tabs: 91% green*
 ![bar chart](././product_39733011000001106_stock_levels.png)
 ([<img src='./heatmap_39733011000001106.png' width='200'>](./heatmap_39733011000001106.png))
 *Cefalexin 500mg tablets: 54% green*
